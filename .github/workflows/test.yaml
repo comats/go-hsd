@@ -19,10 +19,9 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
       - name: Generate coverage report
-        run: go test -coverprofile=./coverage.txt -covermode=atomic ./...
+        run: go test -coverprofile=coverage.txt ./...
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.txt
-          fail_ci_if_error: true
