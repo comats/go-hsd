@@ -1,3 +1,3 @@
-module github.com/yokkaichi/go-hsd
+module github.com/comats/go-hsd
 
 go 1.20
